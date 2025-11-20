@@ -8,7 +8,7 @@ import sys
 import os
 from dotenv import load_dotenv
 from collections import namedtuple
-from shc_algorithm import stochastic_hill_climb
+from tsa_algorithm import tsa_rf
 
 # --- Konfigurasi Lingkungan ---
 
@@ -23,7 +23,7 @@ VM_SPECS = {
 
 VM_PORT = 5000
 DATASET_FILE = 'dataset.txt'
-RESULTS_FILE = 'shc_results.csv'
+RESULTS_FILE = 'tsa_results.csv'
 SHC_ITERATIONS = 1000
 
 VM = namedtuple('VM', ['name', 'ip', 'cpu_cores', 'ram_gb'])
@@ -235,8 +235,8 @@ async def main():
     tasks_dict = {task.id: task for task in tasks}
     vms_dict = {vm.name: vm for vm in vms}
 
-    # 2. Jalankan Algoritma Penjadwalan (SHC)
-    best_assignment = stochastic_hill_climb(tasks, vms, SHC_ITERATIONS)
+    # 2. Jalankan Algoritma Penjadwalan (TSA-RF)
+    best_assignment = tsa_rf(tasks, vms, iterations=SHC_ITERATIONS, population_size=30)
     
     print("\nPenugasan Tugas Terbaik Ditemukan:")
     for i in range(min(10, len(best_assignment))): # Tampilkan 10 pertama
