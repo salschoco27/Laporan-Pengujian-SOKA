@@ -13,7 +13,7 @@
  - [Analisis Kode](#analisis-kode)
  - [Analisis Kinerja](#analisis-kinerja) <br>
 
-[Cara Menjalankan](#cara-penggunaan---dev)
+[Cara Menjalankan](#cara-penggunaan---dev)<br>
 [Kesimpulan](#kesimpulan)
 
 ## Laporan Pengujian
