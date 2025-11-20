@@ -14,6 +14,7 @@
  - [Analisis Kinerja](#analisis-kinerja) <br>
 
 [Cara Menjalankan](#cara-penggunaan---dev)
+[Kesimpulan](#kesimpulan)
 
 ## Laporan Pengujian
 
